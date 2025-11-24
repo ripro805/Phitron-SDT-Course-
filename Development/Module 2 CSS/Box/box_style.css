@@ -1,0 +1,13 @@
+.box{
+    width: 400px;
+    border:1px solid black;
+    text-align: center;
+    padding: 20px;
+   margin: 50px 100px;
+}
+.title{
+    color: purple;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 60px;
+}

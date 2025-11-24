@@ -1,0 +1,18 @@
+.banner1{
+    width: 100%;
+    height: 300px;
+    color: white;
+    border:1px solid goldenrod;
+    margin:auto;
+    background-image: url('/images/bg.avif'),linear-gradient(45deg,yellow,green);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+.butn{
+ width: 300px;
+ padding: 10px;
+ background: linear-gradient(45deg,red,blue);
+}

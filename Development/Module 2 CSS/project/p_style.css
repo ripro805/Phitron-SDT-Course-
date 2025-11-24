@@ -1,0 +1,182 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: grey;
+    padding: 10px;
+}
+.logo{
+    width: 80px;
+}
+li{
+    list-style: none;
+    font-size: 20px;
+}
+li:hover{
+    color: orange;
+    cursor: pointer;
+}
+
+
+.menucontainer{
+    display: flex;
+    gap: 20px;
+}
+.banner-Image{
+    width: 300px;
+   
+    
+}
+.banner-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin :auto;
+    /* background-image: url('/images/background.avif');
+    color: white; */
+}
+.banner-left{
+    width: 400px;
+    line-height: 2;
+}
+.btn{
+    padding: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.btn-hire{
+    background-color: black;
+    margin-right: 20px;
+}
+.btn-project{
+    background-color: green;
+}
+.title{
+    font-size: 40px;
+    font-weight: bold;
+}
+.service-container{
+    margin-top: 50px;
+}
+.servicetitle{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 30px;
+}
+.servicecard{
+    width: 330px;
+    height: 400px;
+    box-shadow: 4px 4px 10px grey  ;
+    border-radius: 7px;
+    text-align: center;
+    margin-top: 30px;
+}
+.serviceimg{
+    width: 250px;
+}
+.service-btn{
+    padding: 15px 25px;
+    background-color:rgb(68, 92, 84);
+    font-size: medium;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+}
+.servicedes{
+    margin-top: 10px;
+}
+.services{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.contact-us{
+    padding: 50px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 4px 4px 10px grey;
+    text-align: center;
+    margin-top: 30px;
+}
+.input-box{
+    padding: 15px;
+    width: 50%;
+    margin-top: 10px;
+
+}
+.messege{
+    width: 40%;
+    height: 100px;
+    margin-top: 10px;
+}
+.submit-btn{
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    border: none;
+    margin-top: 10px;
+}
+.footer {
+    background-color: grey;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+}
+/* Mobile devices: 320px to 768px */
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .banner-container {
+        flex-direction: column;
+    }
+
+    .banner-Image {
+        width: 200px;
+        margin-top: 20px;
+    }
+
+    .banner-left {
+        width: 300px;
+        text-align: center;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Tablets: 769px to 1024px */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .banner-container {
+        flex-direction: column;
+    }
+
+    .banner-Image {
+        width: 250px;
+        margin-top: 20px;
+    }
+
+    .banner-left {
+        width: 350px;
+        text-align: center;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+}

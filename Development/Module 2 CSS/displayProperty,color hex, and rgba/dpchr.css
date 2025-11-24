@@ -1,0 +1,42 @@
+.box{
+    width: 400px;
+    border:1px solid black;
+    text-align: center;
+    padding: 20px;
+   margin: 50px 100px;
+}
+.title{
+    display: inline;
+    color: purple;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 60px;
+}
+.title1{
+    display: inline;
+    color: #FF5733; /* Hex color */
+    font-size: 50px;
+    font-style: italic;
+}
+button{
+    display: block;
+    color: rgba(0, 128, 0, 0.7); /* RGBA color */
+    font-size: 20px;
+    margin: 10px;
+}
+span{
+    display: block;
+    color: rgba(0, 0, 255, 0.5); /* RGBA color */
+    font-size: 20px;
+    margin: 10px;
+}
+#description{
+    color: #008000; /* Hex color */
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: bold;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    
+}
