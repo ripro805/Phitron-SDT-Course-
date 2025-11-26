@@ -1,0 +1,323 @@
+/* Updated styles to match the provided picture */
+
+body {
+    background: #0a0a0a;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    background: #111;
+    padding: 15px 0;
+}
+
+.logo-text {
+    font-size: 40px;
+    color: cyan;
+    font-weight: bold;
+}
+
+/* Adjusted Navbar Logo Icon Size */
+.logo-img {
+    width: 40px; /* Reduced width */
+    height: 40px; /* Reduced height */
+}
+
+.menu-items .nav-link {
+    color: #fff;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Added hover effect for navbar links */
+.menu-items .nav-link:hover {
+    color: #00ffff; /* Change color on hover */
+}
+
+.hero {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.profile-img {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Updated Banner Text Styles */
+.hero h3 {
+    font-size: 24px;
+    color: cyan;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: cyan;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero .subtitle {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.hero .description {
+    font-size: 16px;
+    color: white;
+    line-height: 1.6;
+}
+
+.social-icons i {
+    font-size: 25px;
+    margin-right: 15px;
+    cursor: pointer;
+    color: cyan;
+}
+
+.section-title {
+    margin: 50px 0;
+    color: cyan;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Modern Portfolio Section Styles */
+.portfolio-card {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.portfolio-card .card-title {
+    font-size: 20px;
+    color: cyan;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.portfolio-card .card-text {
+    font-size: 14px;
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.portfolio-card ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.portfolio-card ul li {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.portfolio-card .tech-stack {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.portfolio-card .tech-stack span {
+    background: #222;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.portfolio-card .icon-link {
+    margin-left: 8px;
+    color: cyan;
+    font-size: 20px;
+}
+
+/* Updated Contact Section Styles */
+.contact-section {
+    background: linear-gradient(135deg, #000, #222);
+    padding: 50px 0;
+    color: white;
+}
+
+.contact-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.contact-box {
+    width: 60%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+}
+
+.contact-box input,
+.contact-box textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.contact-box input::placeholder,
+.contact-box textarea::placeholder {
+    color: #aaa;
+}
+
+.contact-box button.btn-send {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    border: none;
+    color: cyan;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-box button.btn-send:hover {
+    background: cyan;
+    color: black;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    margin-top: 50px;
+    color: white;
+    font-size: 14px;
+}
+
+/* Updated styles for Resume button */
+.hero .btn-primary {
+    background: cyan;
+    border: none;
+    color: black;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    height: 40px; /* Reduced height */
+    width: 120px; /* Reduced width */
+}
+
+.hero .btn-primary i {
+    margin-left: 5px;
+    color: black; /* Changed icon color to black */
+}
+
+/* Updated Navbar Resume Button to Match Banner Button */
+.navbar .btn-primary {
+    background: cyan;
+    border: none;
+    color: black;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.navbar .btn-primary i {
+    margin-left: 5px;
+    color: black;
+}
+
+/* Fixed margin-top issue for mobile responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 20px; /* Adjusted margin for smaller screens */
+    }
+
+    /* Increased margin-top for profile photo in mobile responsiveness */
+    .profile-img {
+        margin-top: 30px; /* Increased margin to avoid overlap with Resume button */
+    }
+
+    /* Adjusted layout for project cards */
+    .portfolio-card {
+        margin-bottom: 20px;
+    }
+
+    .portfolio-card:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+}
+
+/* Adjusted layout for project cards to be vertical on desktop */
+@media (min-width: 1024px) {
+    .portfolio-card {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+/* Dark-Themed Portfolio Section Styles */
+#skills-education {
+    margin-top: 50px;
+    color: white;
+}
+
+.text-neon {
+    color: cyan;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.skill-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.badge {
+    background: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+}
+
+.education {
+    margin-top: 20px;
+}
+
+.education .degree {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.education .years {
+    font-size: 14px;
+    color: gray;
+}
