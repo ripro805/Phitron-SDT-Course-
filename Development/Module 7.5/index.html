@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Search App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="mealDetailsCard" class="meal-details-card hidden">
+            <button id="closeBtn" class="close-btn">&times;</button>
+            <div class="details-content">
+                <img id="detailsImage" src="" alt="Meal Image" class="details-image">
+                <div class="details-info">
+                    <h2 id="detailsName"></h2>
+                    <p class="details-meta">
+                        <span id="detailsCategory"></span> • <span id="detailsArea"></span>
+                    </p>
+                    <div class="details-instructions">
+                        <h3>Instructions</h3>
+                        <p id="detailsInstructions"></p>
+                    </div>
+                    <div class="details-ingredients">
+                        <h3>Ingredients</h3>
+                        <ul id="ingredientsList"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Find your favorite food" 
+                autocomplete="off"
+            >
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div id="loadingSpinner" class="loading-spinner hidden">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+
+        <div id="notFoundMessage" class="not-found hidden">
+            <p>😕 Not Found</p>
+            <p class="sub-message">Try searching for another meal</p>
+        </div>
+
+        <div id="mealsGrid" class="meals-grid"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

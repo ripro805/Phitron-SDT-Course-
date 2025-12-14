@@ -1,69 +1,82 @@
+const API_BASE_URL = 'https://fakestoreapi.com/products';
+
 const loadAllProduct = () => {
-  fetch("https://fakestoreapi.com/products")
+  fetch(API_BASE_URL)
     .then((res) => res.json())
     .then((data) => {
       displayProduct(data);
+    })
+    .catch((error) => {
+      console.error('Error loading products:', error);
     });
 };
 
 const displayProduct = (products) => {
-  const productContaine = document.getElementById("product-container");
+  const productContainer = document.getElementById('product-container');
 
   products.forEach((product) => {
     console.log(product);
-    const div = document.createElement("div");
-    div.classList.add("card");
+    
+    const div = document.createElement('div');
+    div.classList.add('card');
     div.innerHTML = `
-        <img class="card-img" src=${product.image} alt="" />
+        <img class="card-img" src="${product.image}" alt="${product.title}" />
         <h5>${product.title}</h5>
-        <h3>price: ${product.price}</h3>
-        <p>${product.description.slice(0, 50)}</p>
+        <h3>Price: $${product.price}</h3>
+        <p>${product.description.slice(0, 50)}...</p>
         <button onclick="singleProduct('${product.id}')">Details</button>
-        <button onclick="handleAddToCart('${product.title.slice(0, 12)}',${
-      product?.price
-    })">Add toTO CArt</button>
-        `;
+        <button onclick="handleAddToCart('${product.title.slice(0, 12)}', ${product?.price})">Add to Cart</button>
+    `;
 
-    productContaine.appendChild(div);
+    productContainer.appendChild(div);
   });
 };
 
-const handleAddToCart = (name, price) => {nm 
-  const cartCount = document.getElementById("count").innerText;
+const handleAddToCart = (name, price) => {
+  const cartCount = document.getElementById('count').innerText;
+  let convertedCount = parseInt(cartCount);
+  convertedCount = convertedCount + 1;
+  document.getElementById('count').innerText = convertedCount;
 
-  let convertedCOunt = parseInt(cartCount);
-  convertedCOunt = convertedCOunt + 1;
-  document.getElementById("count").innerText = convertedCOunt;
+  console.log('Cart count:', convertedCount);
 
-  console.log(convertedCOunt);
+  const container = document.getElementById('cart-main-container');
+  console.log('Adding to cart:', name, price);
 
-  const container = document.getElementById("cart-main-container");
-  console.log(name, price);
-
-  const div = document.createElement("div");
-  div.classList.add("cart-info");
+  const div = document.createElement('div');
+  div.classList.add('cart-info');
   div.innerHTML = `
     <p>${name}</p>
     <h3 class="price">${price}</h3>
-    `;
+  `;
+  
   container.appendChild(div);
-  UpdateTotal();
+  
+  updateTotal();
 };
 
-const UpdateTotal = () => {
-  const allPrice = document.getElementsByClassName("price");
+const updateTotal = () => {
+  const allPrice = document.getElementsByClassName('price');
   let count = 0;
+  
   for (const element of allPrice) {
     count = count + parseFloat(element.innerText);
   }
-  document.getElementById("total").innerText = count.toFixed(2);
+  
+  document.getElementById('total').innerText = count.toFixed(2);
 };
 
 const singleProduct = (id) => {
-    console.log(id);
-  fetch(`https://fakestoreapi.com/products/${id}`)
+  console.log('Fetching product ID:', id);
+  
+  fetch(`${API_BASE_URL}/${id}`)
     .then((res) => res.json())
-    .then((json) => console.log(json));
+    .then((product) => {
+      console.log('Product details:', product);
+    })
+    .catch((error) => {
+      console.error('Error fetching product details:', error);
+    });
 };
 
 loadAllProduct();
