@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drink Search App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="search-section">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search for drinks...">
+                <button id="searchBtn">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="main-content">
+            <div class="drinks-container" id="drinksContainer">
+            </div>
+
+            <div class="group-container">
+                <div class="group-card">
+                    <h2>Total Cart: <span id="groupCount">0</span></h2>
+                    <div class="group-header">
+                        <div class="group-header-row">
+                            <span class="header-sl">SL</span>
+                            <span class="header-img">Img</span>
+                            <span class="header-name">Name</span>
+                        </div>
+                    </div>
+                    <div class="group-list" id="groupList">
+                        <p class="empty-message">No drinks added yet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <div id="modalBody">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
